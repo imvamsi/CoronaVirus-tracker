@@ -1,8 +1,61 @@
 import React from 'react';
+import {
+ Card, CardContent, Typography, Grid 
+} from '@material-ui/core';
+import CountUp from 'react-countup';
+import styles from './Cards.module.css';
 
-const Cards = () => (
-  <div>
-    <h1>Cards</h1>
+const Cards = ({ data: {
+ confirmed, recovered, deaths, lastUpdate 
+} }) => (
+  <div className={styles.container}>
+    <Grid container spacing={2} justify="center">
+      <Grid item component={Card}>
+        <CardContent>
+          <Typography color="textSecondary" gutterBottom>
+            Infected
+          </Typography>
+          <Typography variant="h5">
+            <CountUp
+              start={0}
+              end={confirmed && confirmed.value ? confirmed.value : ''}
+              seperator=","
+              duration={2.5}
+            />
+          </Typography>
+          <Typography color="textSecondary">
+            {new Date(lastUpdate).toDateString()}
+          </Typography>
+          <Typography variant="body2">
+            No of deaths caused by chinese virus
+          </Typography>
+        </CardContent>
+      </Grid>
+      <Grid item component={Card}>
+        <CardContent>
+          <Typography color="textSecondary" gutterBottom>
+            Infected
+          </Typography>
+          <Typography variant="h5">Real data</Typography>
+          <Typography color="textSecondary">Real data</Typography>
+          <Typography variant="body2">
+            No of deaths caused by chinese virus
+          </Typography>
+        </CardContent>
+      </Grid>
+      <Grid item component={Card}>
+        <CardContent>
+          <Typography color="textSecondary" gutterBottom>
+            Infected
+          </Typography>
+          <Typography variant="h5">Real data</Typography>
+          <Typography color="textSecondary">Real data</Typography>
+          <Typography variant="body2">
+            No of deaths caused by chinese virus
+          </Typography>
+        </CardContent>
+      </Grid>
+    </Grid>
   </div>
 );
 
