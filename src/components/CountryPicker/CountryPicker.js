@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const CountryPicker = () => {
-    return (
-        <div>
-          <h1>CountryPicker</h1> 
-        </div>
-    )
-}
+const CountryPicker = () => (
+  <div>
+    <h1>CountryPicker</h1>
+  </div>
+);
 
-export default CountryPicker
+export default CountryPicker;
