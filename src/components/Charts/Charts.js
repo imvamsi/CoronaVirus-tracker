@@ -10,7 +10,7 @@ const Charts = () => {
     fetchDailyInfectionRate()
       .then((res) => setDailyRate(res))
       .catch((err) => console.log(err));
-  });
+  }, [dailyRate]);
 
   const lineChart = dailyRate.length !== 0 ? (
     <Line
