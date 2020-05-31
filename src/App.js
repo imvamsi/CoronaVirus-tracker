@@ -11,7 +11,7 @@ function App() {
 
   const handleCountryChange = async (country) => {
     const response = await fetchData(country);
-    console.log(response);
+    setdata({ value: response, country });
   };
   useEffect(() => {
     fetchData()
@@ -24,8 +24,7 @@ function App() {
     <div className={styles.container}>
       <Cards data={data.value} />
       <CountryPicker handleChange={handleCountryChange} />
-      <Charts />
-
+      <Charts data={data.value} country={data.country} />
     </div>
   );
 }
