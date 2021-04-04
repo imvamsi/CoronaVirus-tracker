@@ -1,3 +1,4 @@
 # Corona Tracker
 
-> Application made using react, material-ui and charts js to visualize the effects caused by the pandemic in all parts of the world.
+Application made using react, material-ui and charts js to visualize the information about number of deaths, 
+total cases, recovered people in every country through an interactive way of diplaying data
